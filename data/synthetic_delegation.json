@@ -1,0 +1,7 @@
+[
+ {"principal":"svc-legacy-print","delegation_type":"unconstrained","enabled":true,"privileged":false,"protocol_transition":false,"interactive_logon":true,"managed_identity":false,"target_count":18,"rbcd_writer_count":0,"criticality":"high","owner":"Workplace Engineering","review_age_days":540},
+ {"principal":"svc-tier0-orchestrator","delegation_type":"constrained","enabled":true,"privileged":true,"protocol_transition":true,"interactive_logon":false,"managed_identity":false,"target_count":6,"rbcd_writer_count":0,"criticality":"critical","owner":"Identity Platform","review_age_days":190},
+ {"principal":"app-orders-web","delegation_type":"rbcd","enabled":true,"privileged":false,"protocol_transition":false,"interactive_logon":false,"managed_identity":true,"target_count":2,"rbcd_writer_count":5,"criticality":"high","owner":"Application Platform","review_age_days":410},
+ {"principal":"gmsa-reporting","delegation_type":"constrained","enabled":true,"privileged":false,"protocol_transition":false,"interactive_logon":false,"managed_identity":true,"target_count":2,"rbcd_writer_count":0,"criticality":"medium","owner":"Data Services","review_age_days":60},
+ {"principal":"svc-retired-erp","delegation_type":"unconstrained","enabled":false,"privileged":false,"protocol_transition":false,"interactive_logon":false,"managed_identity":false,"target_count":1,"rbcd_writer_count":0,"criticality":"low","owner":"ERP Operations","review_age_days":800}
+]

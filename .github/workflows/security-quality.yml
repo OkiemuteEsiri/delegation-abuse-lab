@@ -1,0 +1,24 @@
+name: security-quality
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile
+        run: python -m compileall -q src tests
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Synthetic assessment smoke test
+        run: |
+          python -m src.cli data/synthetic_delegation.json --output reports/generated-assessment.md
+          grep -q "Delegation Security Assessment" reports/generated-assessment.md
+          grep -q "T1558" reports/generated-assessment.md
